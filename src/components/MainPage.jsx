@@ -9,8 +9,10 @@ const MainPage = () => {
     const submitHandler = (e) => {
         e.preventDefault();
 
+    // makes sure the app does nothing if the input field is empty upon adding task
         if (!inputValue) return;
 
+    // if the task already exists the app adds nothing and clears the input field
         if (task.includes(inputValue)) {
             setInputValue("");
             return;
